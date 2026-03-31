@@ -2,8 +2,7 @@ version: '3.9'
 
 services:
   bjsoft-website:
-    build: .
-    container_name: bjsoft-landing
+    image: ghcr.io/ricardops34/bjsoft-landing:latest
     restart: unless-stopped
     networks:
       - network_public
@@ -13,7 +12,7 @@ services:
       - 'traefik.http.routers.bjsoft.entrypoints=websecure'
       - 'traefik.http.routers.bjsoft.tls.certresolver=letsencrypt'
       - 'traefik.http.services.bjsoft.loadbalancer.server.port=80'
-      # Redirecionamento automático de HTTP para HTTPS (Traefik 2.x+)
+      # Redirecionamento automático de HTTP para HTTPS (Traefik v3)
       - 'traefik.http.routers.bjsoft-http.rule=Host(`www.bjsoft.com.br`) || Host(`bjsoft.com.br`)'
       - 'traefik.http.routers.bjsoft-http.entrypoints=web'
       - 'traefik.http.routers.bjsoft-http.middlewares=redirect-to-https'
