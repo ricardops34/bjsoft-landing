@@ -2,16 +2,16 @@ version: '3.9'
 
 services:
   bjsoft-website:
-    image: ghcr.io/ricardops34/bjsoft-landing:latest
+    build: .
     restart: unless-stopped
     networks:
       - network_public
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.bjsoft.rule=Host(`www.bjsoft.com.br`) || Host(`bjsoft.com.br`)'
-      - 'traefik.http.routers.bjsoft.entrypoints=websecure'
-      - 'traefik.http.routers.bjsoft.tls.certresolver=letsencrypt'
-      - 'traefik.http.services.bjsoft.loadbalancer.server.port=80'
+      - 'traefik.http.routers.bjsoft-router.rule=Host(`www.bjsoft.com.br`) || Host(`bjsoft.com.br`)'
+      - 'traefik.http.routers.bjsoft-router.entrypoints=websecure'
+      - 'traefik.http.routers.bjsoft-router.tls.certresolver=letsencrypt'
+      - 'traefik.http.services.bjsoft-service.loadbalancer.server.port=80'
       # Redirecionamento automático de HTTP para HTTPS (Traefik v3)
       - 'traefik.http.routers.bjsoft-http.rule=Host(`www.bjsoft.com.br`) || Host(`bjsoft.com.br`)'
       - 'traefik.http.routers.bjsoft-http.entrypoints=web'
