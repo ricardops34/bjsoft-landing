@@ -4,8 +4,6 @@ services:
   bjsoft-website:
     image: ghcr.io/ricardops34/bjsoft-landing:latest
     restart: unless-stopped
-    volumes:
-      - landing_data:/usr/share/nginx/html
     networks:
       - network_public
     labels:
@@ -16,12 +14,7 @@ services:
       - 'traefik.http.services.bjsoft.loadbalancer.server.port=80'
       - 'traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https'
       - 'traefik.http.routers.bjsoft.middlewares=sslheader@swarm'
-volumes:
-  landing_data:
-    external: true
-    name: landing_data
-    
+
 networks:
   network_public:
     external: true
-
