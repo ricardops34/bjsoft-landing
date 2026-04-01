@@ -5,7 +5,7 @@ services:
     image: ghcr.io/ricardops34/bjsoft-landing:latest
     restart: unless-stopped
     volumes:
-      - landing_data:/var/www/html
+      - landing_data:/usr/share/nginx/html
     networks:
       - network_public
     labels:
