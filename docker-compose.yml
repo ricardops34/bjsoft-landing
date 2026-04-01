@@ -1,20 +1,30 @@
-version: '3.9'
+version: "3.8"
 
 services:
-  bjsoft-website:
+  bjsoft-landing:
     image: ghcr.io/ricardops34/bjsoft-landing:latest
-    restart: unless-stopped
     networks:
       - network_public
-    labels:
-      - 'traefik.enable=true'
-      - 'traefik.http.routers.bjsoft.rule=Host(`www.bjsoft.com.br`) || Host(`bjsoft.com.br`)'
-      - 'traefik.http.routers.bjsoft.entrypoints=websecure'
-      - 'traefik.http.routers.bjsoft.tls.certresolver=letsencryptresolver'
-      - 'traefik.http.services.bjsoft.loadbalancer.server.port=80'
-      - 'traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https'
-      - 'traefik.http.routers.bjsoft.middlewares=sslheader@swarm'
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.enable=true
+        - traefik.swarm.network=network_public
+        - traefik.http.routers.bjsoft-landing.rule=Host(`www.bjsoft.com.br`) || Host(`bjsoft.com.br`)
+        - traefik.http.routers.bjsoft-landing.entrypoints=websecure
+        - traefik.http.routers.bjsoft-landing.tls=true
+        - traefik.http.routers.bjsoft-landing.tls.certresolver=letsencryptresolver
+        - traefik.http.services.bjsoft-landing.loadbalancer.server.port=80
+        - traefik.http.middlewares.bjsoft-compress.compress=true
+        - traefik.http.routers.bjsoft-landing.middlewares=bjsoft-compress@swarm
 
 networks:
   network_public:
     external: true
+    name: network_public
