@@ -4,28 +4,23 @@ services:
   bjsoft-website:
     image: ghcr.io/ricardops34/bjsoft-landing:latest
     restart: unless-stopped
+    volumes:
+      - landing_data:/var/www/html
     networks:
       - network_public
     labels:
-      - traefik.enable=true
-      - traefik.swarm.network=network_public
-
-      - traefik.http.routers.bjsoft.rule=Host(www.bjsoft.com.br) || Host(`bjsoft.com.br`)'
-      - traefik.http.routers.bjsoft.entrypoints=websecure
-      - traefik.http.routers.bjsoft.tls=true
-      - traefik.http.routers.bjsoft.tls.certresolver=letsencryptresolver
-      - traefik.http.services.bjsoft.loadbalancer.server.port=80
-
-      - traefik.http.middlewares.bjsoft-compress.compress=true
-      - traefik.http.middlewares.bjsoft-security.headers.browserxssfilter=true
-      - traefik.http.middlewares.bjsoft-security.headers.contenttypenosniff=true
-      - traefik.http.middlewares.bjsoft-security.headers.forcestsheader=true
-      - traefik.http.middlewares.bjsoft-security.headers.stsseconds=31536000
-      - traefik.http.middlewares.bjsoft-security.headers.stsincludesubdomains=true
-      - traefik.http.middlewares.bjsoft-security.headers.stspreload=true
-
-      - traefik.http.routers.bjsoft.middlewares=bjsoft-compress@swarm,bjsoft-security@swarm
-
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.bjsoft.rule=Host(`www.bjsoft.com.br`) || Host(`bjsoft.com.br`)'
+      - 'traefik.http.routers.bjsoft.entrypoints=websecure'
+      - 'traefik.http.routers.bjsoft.tls.certresolver=letsencryptresolver'
+      - 'traefik.http.services.bjsoft.loadbalancer.server.port=80'
+      - 'traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https'
+      - 'traefik.http.routers.bjsoft.middlewares=sslheader@swarm'
+volumes:
+  landing_data:
+    external: true
+    name: landing_data
+    
 networks:
   network_public:
     external: true
