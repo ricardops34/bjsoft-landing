@@ -1,375 +1,479 @@
 <!DOCTYPE html>
 
-<html class="light scroll-smooth" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>BJ Soft | Inovação que impulsiona seu ERP</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-dim": "#d6dade",
-              "secondary-container": "#e2165f",
-              "inverse-primary": "#44d8f1",
-              "error-container": "#ffdad6",
-              "on-primary-fixed": "#001f25",
-              "on-secondary-fixed-variant": "#900038",
-              "on-primary-fixed-variant": "#004e59",
-              "surface-container-lowest": "#ffffff",
-              "tertiary-fixed-dim": "#ffb870",
-              "secondary-fixed-dim": "#ffb2be",
-              "surface-container-high": "#e4e9ed",
-              "surface-variant": "#dfe3e7",
-              "background": "#f6fafe",
-              "on-tertiary-fixed-variant": "#693c00",
-              "inverse-on-surface": "#edf1f5",
-              "on-error": "#ffffff",
-              "error": "#ba1a1a",
-              "outline-variant": "#bbc9cc",
-              "on-surface": "#171c1f",
-              "outline": "#6c797c",
-              "on-error-container": "#93000a",
-              "surface-container-low": "#f0f4f8",
-              "surface-container-highest": "#dfe3e7",
-              "surface-container": "#eaeef2",
-              "tertiary-fixed": "#ffdcbe",
-              "secondary-fixed": "#ffd9de",
-              "on-surface-variant": "#3c494c",
-              "surface-tint": "#006876",
-              "primary-fixed-dim": "#44d8f1",
-              "on-tertiary-container": "#5f3500",
-              "secondary": "#b80049",
-              "on-tertiary-fixed": "#2c1600",
-              "on-secondary": "#ffffff",
-              "surface-bright": "#f6fafe",
-              "on-primary": "#ffffff",
-              "surface": "#f6fafe",
-              "on-secondary-fixed": "#400014",
-              "primary-container": "#00bcd4",
-              "inverse-surface": "#2c3134",
-              "tertiary": "#8b5000",
-              "primary": "#006876",
-              "on-secondary-container": "#fffbff",
-              "primary-fixed": "#a1efff",
-              "on-tertiary": "#ffffff",
-              "on-background": "#171c1f",
-              "tertiary-container": "#f79300",
-              "on-primary-container": "#004650"
+<html class="light scroll-smooth" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BJ Soft | Inovação que impulsiona seu ERP</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#d6dade",
+                        "secondary-container": "#e2165f",
+                        "inverse-primary": "#44d8f1",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001f25",
+                        "on-secondary-fixed-variant": "#900038",
+                        "on-primary-fixed-variant": "#004e59",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "secondary-fixed-dim": "#ffb2be",
+                        "surface-container-high": "#e4e9ed",
+                        "surface-variant": "#dfe3e7",
+                        "background": "#f6fafe",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "inverse-on-surface": "#edf1f5",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#bbc9cc",
+                        "on-surface": "#171c1f",
+                        "outline": "#6c797c",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f0f4f8",
+                        "surface-container-highest": "#dfe3e7",
+                        "surface-container": "#eaeef2",
+                        "tertiary-fixed": "#ffdcbe",
+                        "secondary-fixed": "#ffd9de",
+                        "on-surface-variant": "#3c494c",
+                        "surface-tint": "#006876",
+                        "primary-fixed-dim": "#44d8f1",
+                        "on-tertiary-container": "#5f3500",
+                        "secondary": "#b80049",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f6fafe",
+                        "on-primary": "#ffffff",
+                        "surface": "#f6fafe",
+                        "on-secondary-fixed": "#400014",
+                        "primary-container": "#00bcd4",
+                        "inverse-surface": "#2c3134",
+                        "tertiary": "#8b5000",
+                        "primary": "#006876",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed": "#a1efff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#171c1f",
+                        "tertiary-container": "#f79300",
+                        "on-primary-container": "#004650"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
             },
-            fontFamily: {
-              "headline": ["Manrope", "sans-serif"],
-              "body": ["Inter", "sans-serif"],
-              "label": ["Inter", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .glass-nav {
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
+
         sup {
             font-size: 0.6em;
             vertical-align: super;
         }
+
         .hero-gradient {
             background: linear-gradient(135deg, #006876 0%, #00bcd4 100%);
         }
     </style>
 </head>
-<body class="bg-background font-body text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+
+<body
+    class="bg-background font-body text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
             <div class="flex items-center gap-2">
                 <img src="assets/logo.png" alt="BJ Soft Logo" class="h-10 w-auto">
-                <span class="text-xl font-black tracking-tighter text-cyan-700 dark:text-cyan-400 font-headline">BJ Soft</span>
+                <span class="text-xl font-black tracking-tighter text-cyan-700 dark:text-cyan-400 font-headline">BJ
+                    Soft</span>
             </div>
-<div class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
-<a class="text-cyan-700 dark:text-cyan-300 border-b-2 border-cyan-500 pb-1 transition-all duration-300" href="#servicos">Serviços</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-all duration-300" href="#tecnologia">Tecnologia</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-all duration-300" href="#sobre">Sobre</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-all duration-300" href="#contato">Contato</a>
-</div>
-<button class="bg-primary hover:opacity-80 text-on-primary px-6 py-2 rounded-full font-headline font-bold tracking-tight transition-transform scale-95 active:scale-90">
+            <div class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
+                <a class="text-cyan-700 dark:text-cyan-300 border-b-2 border-cyan-500 pb-1 transition-all duration-300"
+                    href="#servicos">Serviços</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-all duration-300"
+                    href="#tecnologia">Tecnologia</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-all duration-300"
+                    href="#sobre">Sobre</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-all duration-300"
+                    href="#contato">Contato</a>
+            </div>
+            <button
+                class="bg-primary hover:opacity-80 text-on-primary px-6 py-2 rounded-full font-headline font-bold tracking-tight transition-transform scale-95 active:scale-90">
                 Consultoria
             </button>
-</div>
-</nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center overflow-hidden px-8">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,#a1efff_0%,transparent_50%)] opacity-30"></div>
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_70%,#ffd9de_0%,transparent_40%)] opacity-20"></div>
-<div class="absolute -right-20 top-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
-</div>
-<div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
-<div class="space-y-8">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/20">
-<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-<span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Ecossistema TOTVS<sup>®</sup></span>
-</div>
-<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.05] text-on-surface">
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[921px] flex items-center overflow-hidden px-8">
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,#a1efff_0%,transparent_50%)] opacity-30">
+                </div>
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_20%_70%,#ffd9de_0%,transparent_40%)] opacity-20">
+                </div>
+                <div class="absolute -right-20 top-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]">
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/20">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Ecossistema
+                            TOTVS<sup>®</sup></span>
+                    </div>
+                    <h1
+                        class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.05] text-on-surface">
                         BJ Soft: Inovação que impulsiona seu <span class="text-primary">ERP</span>
-</h1>
-<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
-                        Suporte Estratégico, Continuidade e Eficiência Operacional no ecossistema <span class="font-semibold">TOTVS<sup>®</sup> Protheus<sup>®</sup></span>. Elevando sua gestão ao próximo nível.
+                    </h1>
+                    <p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Suporte Estratégico, Continuidade e Eficiência Operacional no ecossistema <span
+                            class="font-semibold">TOTVS<sup>®</sup> Protheus<sup>®</sup></span>. Elevando sua gestão ao
+                        próximo nível.
                     </p>
-<div class="flex flex-wrap gap-4">
-<button class="hero-gradient text-on-primary px-8 py-4 rounded-full font-headline font-bold text-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="hero-gradient text-on-primary px-8 py-4 rounded-full font-headline font-bold text-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
                             Falar com Especialista
                         </button>
-<button class="bg-surface-container-highest text-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-high transition-colors">
+                        <button
+                            class="bg-surface-container-highest text-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-high transition-colors">
                             Conhecer Soluções
                         </button>
-</div>
-</div>
-<div class="relative hidden lg:block">
-<div class="aspect-square relative flex items-center justify-center">
-<div class="absolute inset-0 bg-primary/10 rounded-full animate-pulse blur-3xl"></div>
-<img alt="Visualização de Crescimento e Metas" class="w-full h-full object-cover rounded-[3rem] shadow-2xl mix-blend-multiply" src="assets/hero_growth.png"/>
-<!-- Floating Badges -->
-<div class="absolute -top-4 -left-4 p-6 glass-nav bg-surface-bright/40 rounded-2xl shadow-xl border border-white/20">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="hub">hub</span>
-<div class="mt-2 font-headline font-bold text-sm">Conectividade</div>
-</div>
-<div class="absolute bottom-12 -right-8 p-6 glass-nav bg-surface-bright/40 rounded-2xl shadow-xl border border-white/20">
-<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="bolt">bolt</span>
-<div class="mt-2 font-headline font-bold text-sm">Performance</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-24 px-8 bg-surface-container-low" id="servicos">
-<div class="max-w-7xl mx-auto">
-<div class="mb-16">
-<h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight mb-4">Nossas Soluções</h2>
-<div class="h-1.5 w-24 bg-primary rounded-full"></div>
-</div>
-<div class="grid md:grid-cols-12 gap-6">
-<!-- Featured Card -->
-<div class="md:col-span-12 lg:col-span-6 bg-surface-container-lowest p-10 rounded-3xl shadow-soft flex flex-col justify-between group hover:shadow-xl transition-shadow border border-outline-variant/10">
-<div>
-<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined text-3xl" data-icon="shield_with_heart">shield_with_heart</span>
-</div>
-<h3 class="font-headline text-3xl font-bold mb-4">Suporte & Consultoria Estratégica</h3>
-<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
-                                Garantimos a resolução de incidentes, segurança de dados e melhoria contínua do seu ambiente. Consultoria técnica focada em extrair o máximo potencial do seu ERP.
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div class="aspect-square relative flex items-center justify-center">
+                        <div class="absolute inset-0 bg-primary/10 rounded-full animate-pulse blur-3xl"></div>
+                        <img alt="Visualização de Crescimento e Metas"
+                            class="w-full h-full object-cover rounded-[3rem] shadow-2xl mix-blend-multiply"
+                            src="assets/hero_growth.png" />
+                        <!-- Floating Badges -->
+                        <div
+                            class="absolute -top-4 -left-4 p-6 glass-nav bg-surface-bright/40 rounded-2xl shadow-xl border border-white/20">
+                            <span class="material-symbols-outlined text-secondary text-4xl" data-icon="hub">hub</span>
+                            <div class="mt-2 font-headline font-bold text-sm">Conectividade</div>
+                        </div>
+                        <div
+                            class="absolute bottom-12 -right-8 p-6 glass-nav bg-surface-bright/40 rounded-2xl shadow-xl border border-white/20">
+                            <span class="material-symbols-outlined text-tertiary text-4xl" data-icon="bolt">bolt</span>
+                            <div class="mt-2 font-headline font-bold text-sm">Performance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="py-24 px-8 bg-surface-container-low" id="servicos">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight mb-4">Nossas
+                        Soluções</h2>
+                    <div class="h-1.5 w-24 bg-primary rounded-full"></div>
+                </div>
+                <div class="grid md:grid-cols-12 gap-6">
+                    <!-- Featured Card -->
+                    <div
+                        class="md:col-span-12 lg:col-span-6 bg-surface-container-lowest p-10 rounded-3xl shadow-soft flex flex-col justify-between group hover:shadow-xl transition-shadow border border-outline-variant/10">
+                        <div>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                                <span class="material-symbols-outlined text-3xl"
+                                    data-icon="shield_with_heart">shield_with_heart</span>
+                            </div>
+                            <h3 class="font-headline text-3xl font-bold mb-4">Suporte & Consultoria Estratégica</h3>
+                            <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                                Garantimos a resolução de incidentes, segurança de dados e melhoria contínua do seu
+                                ambiente. Consultoria técnica focada em extrair o máximo potencial do seu ERP.
                             </p>
-</div>
-<div class="flex flex-wrap gap-3">
-<span class="px-4 py-1.5 bg-surface-container text-primary font-bold text-xs rounded-full uppercase tracking-widest">Resolução</span>
-<span class="px-4 py-1.5 bg-surface-container text-primary font-bold text-xs rounded-full uppercase tracking-widest">Segurança</span>
-<span class="px-4 py-1.5 bg-surface-container text-primary font-bold text-xs rounded-full uppercase tracking-widest">Melhoria</span>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="md:col-span-6 lg:col-span-3 bg-surface-container-lowest p-8 rounded-3xl shadow-soft border border-outline-variant/10 flex flex-col justify-between hover:-translate-y-2 transition-transform">
-<div>
-<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined text-2xl" data-icon="palette">palette</span>
-</div>
-<h3 class="font-headline text-xl font-bold mb-3">Interfaces Modernas e Intuitivas</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">
-                                Transformamos a experiência do usuário com interfaces intuitivas, responsivas e alinhadas aos padrões modernos de design.
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-1.5 bg-surface-container text-primary font-bold text-xs rounded-full uppercase tracking-widest">Resolução</span>
+                            <span
+                                class="px-4 py-1.5 bg-surface-container text-primary font-bold text-xs rounded-full uppercase tracking-widest">Segurança</span>
+                            <span
+                                class="px-4 py-1.5 bg-surface-container text-primary font-bold text-xs rounded-full uppercase tracking-widest">Melhoria</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="md:col-span-6 lg:col-span-3 bg-surface-container-lowest p-8 rounded-3xl shadow-soft border border-outline-variant/10 flex flex-col justify-between hover:-translate-y-2 transition-transform">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-6 text-secondary">
+                                <span class="material-symbols-outlined text-2xl" data-icon="palette">palette</span>
+                            </div>
+                            <h3 class="font-headline text-xl font-bold mb-3">Interfaces Modernas e Intuitivas</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">
+                                Transformamos a experiência do usuário com interfaces intuitivas, responsivas e
+                                alinhadas aos padrões modernos de design.
                             </p>
-</div>
-<div class="mt-8 flex items-center text-secondary font-bold text-sm gap-2">
-                            Saiba mais <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="md:col-span-6 lg:col-span-3 bg-surface-container-lowest p-8 rounded-3xl shadow-soft border border-outline-variant/10 flex flex-col justify-between hover:-translate-y-2 transition-transform">
-<div>
-<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center mb-6 text-tertiary">
-<span class="material-symbols-outlined text-2xl" data-icon="code">code</span>
-</div>
-<h3 class="font-headline text-xl font-bold mb-3">Desenvolvimento Sob Medida</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">
-                                Customizações robustas e escaláveis. Desenvolvimento especializado para atender as regras de negócio mais complexas da sua empresa.
+                        </div>
+                        <div class="mt-8 flex items-center text-secondary font-bold text-sm gap-2">
+                            Saiba mais <span class="material-symbols-outlined text-sm"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="md:col-span-6 lg:col-span-3 bg-surface-container-lowest p-8 rounded-3xl shadow-soft border border-outline-variant/10 flex flex-col justify-between hover:-translate-y-2 transition-transform">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center mb-6 text-tertiary">
+                                <span class="material-symbols-outlined text-2xl" data-icon="code">code</span>
+                            </div>
+                            <h3 class="font-headline text-xl font-bold mb-3">Desenvolvimento Sob Medida</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">
+                                Customizações robustas e escaláveis. Desenvolvimento especializado para atender as
+                                regras de negócio mais complexas da sua empresa.
                             </p>
-</div>
-<div class="mt-8 flex items-center text-tertiary font-bold text-sm gap-2">
-                            Saiba mais <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Technology Section -->
-<section class="py-24 px-8 overflow-hidden" id="tecnologia">
-<div class="max-w-7xl mx-auto">
-<div class="grid lg:grid-cols-2 gap-16 items-center">
-<div class="order-2 lg:order-1 relative">
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-surface-container-low p-6 rounded-2xl space-y-4">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="api">api</span>
-<div class="font-headline font-bold text-lg">REST APIs</div>
-<p class="text-xs text-on-surface-variant">Integrações modernas e seguras para conectar seu ecossistema.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl space-y-4 mt-8">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="settings_ethernet">settings_ethernet</span>
-<div class="font-headline font-bold text-lg">Protheus<sup>®</sup></div>
-<p class="text-xs text-on-surface-variant">Domínio técnico completo da arquitetura TOTVS<sup>®</sup>.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl space-y-4">
-<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="terminal">terminal</span>
-<div class="font-headline font-bold text-lg">TLPP<sup>®</sup></div>
-<p class="text-xs text-on-surface-variant">Linguagem de alto nível para performance e modernidade.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl space-y-4 mt-8">
-<span class="material-symbols-outlined text-cyan-500 text-4xl" data-icon="cloud_sync">cloud_sync</span>
-<div class="font-headline font-bold text-lg">Sincronização</div>
-<p class="text-xs text-on-surface-variant">Dados consistentes entre plataformas externas e seu ERP.</p>
-</div>
-</div>
-</div>
-<div class="order-1 lg:order-2 space-y-6">
-<h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight">Arquitetura de Conectividade</h2>
-<p class="text-lg text-on-surface-variant leading-relaxed">
-                            Nossa tecnologia é pautada na robustez do <span class="font-semibold">Protheus<sup>®</sup></span> combinada com a agilidade de <span class="font-semibold text-primary">REST APIs</span> modernas. Criamos pontes entre seus processos legados e as demandas do futuro digital.
+                        </div>
+                        <div class="mt-8 flex items-center text-tertiary font-bold text-sm gap-2">
+                            Saiba mais <span class="material-symbols-outlined text-sm"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technology Section -->
+        <section class="py-24 px-8 overflow-hidden" id="tecnologia">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1 relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-surface-container-low p-6 rounded-2xl space-y-4">
+                                <span class="material-symbols-outlined text-primary text-4xl" data-icon="api">api</span>
+                                <div class="font-headline font-bold text-lg">REST APIs</div>
+                                <p class="text-xs text-on-surface-variant">Integrações modernas e seguras para conectar
+                                    seu ecossistema.</p>
+                            </div>
+                            <div class="bg-surface-container-low p-6 rounded-2xl space-y-4 mt-8">
+                                <span class="material-symbols-outlined text-secondary text-4xl"
+                                    data-icon="settings_ethernet">settings_ethernet</span>
+                                <div class="font-headline font-bold text-lg">Protheus<sup>®</sup></div>
+                                <p class="text-xs text-on-surface-variant">Domínio técnico completo da arquitetura
+                                    TOTVS<sup>®</sup>.</p>
+                            </div>
+                            <div class="bg-surface-container-low p-6 rounded-2xl space-y-4">
+                                <span class="material-symbols-outlined text-tertiary text-4xl"
+                                    data-icon="terminal">terminal</span>
+                                <div class="font-headline font-bold text-lg">TLPP<sup>®</sup></div>
+                                <p class="text-xs text-on-surface-variant">Linguagem de alto nível para performance e
+                                    modernidade.</p>
+                            </div>
+                            <div class="bg-surface-container-low p-6 rounded-2xl space-y-4 mt-8">
+                                <span class="material-symbols-outlined text-cyan-500 text-4xl"
+                                    data-icon="cloud_sync">cloud_sync</span>
+                                <div class="font-headline font-bold text-lg">Sincronização</div>
+                                <p class="text-xs text-on-surface-variant">Dados consistentes entre plataformas externas
+                                    e seu ERP.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight">Arquitetura de
+                            Conectividade</h2>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Nossa tecnologia é pautada na robustez do <span
+                                class="font-semibold">Protheus<sup>®</sup></span> combinada com a agilidade de <span
+                                class="font-semibold text-primary">REST APIs</span> modernas. Criamos pontes entre seus
+                            processos legados e as demandas do futuro digital.
                         </p>
-<ul class="space-y-4 pt-4">
-<li class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-medium">Backend especializado em ADVPL<sup>®</sup> / TLPP<sup>®</sup></span>
-</li>
-<li class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-medium">Frontend dinâmico com PO-UI<sup>®</sup></span>
-</li>
-<li class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-medium">Monitoramento e Otimização de Queries SQL</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-24 px-8 bg-surface-container-low" id="sobre">
-<div class="max-w-7xl mx-auto">
-<div class="grid lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<div class="mb-8">
-<h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight mb-4">Excelência em Consultoria Digital</h2>
-<div class="h-1.5 w-24 bg-primary rounded-full"></div>
-</div>
-<p class="text-lg text-on-surface-variant leading-relaxed">
-                            A **BJ Soft** nasceu da necessidade de transformar a complexidade dos grandes ERPs em agilidade para o negócio. Com anos de experiência no ecossistema <span class="font-semibold">TOTVS<sup>®</sup> Protheus<sup>®</sup></span>, nossa missão é ser o elo entre a tecnologia legada e o futuro digital.
+                        <ul class="space-y-4 pt-4">
+                            <li class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary" data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="font-medium">Backend especializado em ADVPL<sup>®</sup> /
+                                    TLPP<sup>®</sup></span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary" data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="font-medium">Frontend dinâmico com PO-UI<sup>®</sup></span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary" data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="font-medium">Monitoramento e Otimização de Queries SQL</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="py-24 px-8 bg-surface-container-low" id="sobre">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div class="mb-8">
+                            <h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight mb-4">
+                                Excelência em Consultoria Digital</h2>
+                            <div class="h-1.5 w-24 bg-primary rounded-full"></div>
+                        </div>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            A **BJ Soft** nasceu da necessidade de transformar a complexidade dos grandes ERPs em
+                            agilidade para o negócio. Com anos de experiência no ecossistema <span
+                                class="font-semibold">TOTVS<sup>®</sup> Protheus<sup>®</sup></span>, nossa missão é ser
+                            o elo entre a tecnologia legada e o futuro digital.
                         </p>
-<p class="text-lg text-on-surface-variant leading-relaxed">
-                            Acreditamos que inovação não é apenas criar o novo, mas otimizar o existente para que sua empresa alcance metas e lucros sustentáveis através de indicadores precisos.
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Acreditamos que inovação não é apenas criar o novo, mas otimizar o existente para que sua
+                            empresa alcance metas e lucros sustentáveis através de indicadores precisos.
                         </p>
-<div class="grid grid-cols-2 gap-6 pt-4">
-<div class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/10">
-<div class="text-3xl font-black text-primary mb-2">+100</div>
-<div class="text-sm font-bold text-on-surface-variant">Projetos Entregues</div>
-</div>
-<div class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/10">
-<div class="text-3xl font-black text-secondary mb-2">24/7</div>
-<div class="text-sm font-bold text-on-surface-variant">Suporte Estratégico</div>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl"></div>
-<div class="relative z-10 w-full h-auto rounded-[3rem] shadow-2xl bg-surface-container-highest p-1 overflow-hidden">
-    <img alt="Tecnologia e Desenvolvimento BJ Soft" class="w-full h-auto rounded-[2.8rem] shadow-inner" src="assets/code_typing.png"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="px-8 pb-24" id="contato">
-<div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
-<!-- Contact Form Card -->
-<div class="lg:col-span-7 bg-surface-container-lowest p-10 md:p-16 rounded-[3rem] shadow-soft border border-outline-variant/10">
-<h2 class="font-headline text-3xl font-extrabold text-on-surface mb-8">Fale com nossos Especialistas</h2>
-<form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-    <input type="hidden" name="access_key" value="4dc14390-3dcd-43a5-a138-fcb15b5410b6">
-    <input type="hidden" name="subject" value="Novo Contato do Site BJ Soft!">
-    <input type="hidden" name="from_name" value="Landing Page BJ Soft">
-<div class="grid md:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="block text-sm font-bold text-on-surface-variant ml-1" for="name">Nome Completo</label>
-<input name="name" class="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface" id="name" placeholder="Seu nome" type="text" required/>
-</div>
-<div class="space-y-2">
-<label class="block text-sm font-bold text-on-surface-variant ml-1" for="email">E-mail Profissional</label>
-<input name="email" class="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface" id="email" placeholder="seu@email.com" type="email" required/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="block text-sm font-bold text-on-surface-variant ml-1" for="message">Sua Mensagem</label>
-<textarea name="message" class="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface min-h-[150px]" id="message" placeholder="Como podemos impulsionar seu ERP?" required></textarea>
-</div>
-<button class="hero-gradient text-on-primary w-full md:w-auto px-12 py-4 rounded-full font-headline font-bold text-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform" type="submit">
-                                Enviar Mensagem
-                            </button>
-</form>
-</div>
-<!-- Contact Info Cards -->
-<div class="lg:col-span-5 space-y-6">
-<div class="p-8 bg-primary rounded-[2.5rem] text-on-primary shadow-xl relative overflow-hidden group">
-<div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-white/20 transition-colors"></div>
-<span class="material-symbols-outlined text-4xl mb-4" data-icon="support_agent">support_agent</span>
-<h3 class="font-headline text-xl font-bold mb-2">Suporte Consultivo</h3>
-<p class="text-on-primary/80 text-sm leading-relaxed">Precisa de resolução ágil e consultoria técnica? Nossa área técnica está pronta para ajudar.</p>
-<div class="mt-4 font-bold">suporte@bjsoft.com.br</div>
-</div>
-<div class="p-8 bg-surface-container-lowest rounded-[2.5rem] shadow-soft border border-outline-variant/10">
-<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="business_center">business_center</span>
-<h3 class="font-headline text-xl font-bold text-on-surface mb-2">Parcerias Estratégicas</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Quer elevar seu ERP ao próximo nível? Vamos construir uma estratégia de inovação juntos.</p>
-<div class="mt-4 font-bold text-secondary">comercial@bjsoft.com.br</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full border-t border-slate-200/20 bg-slate-100 dark:bg-slate-950">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-7xl mx-auto gap-8">
-<div class="space-y-4 text-center md:text-left">
-<div class="text-lg font-bold text-slate-800 dark:text-slate-200 font-headline">BJ Soft</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm max-w-xs font-body tracking-wide">
+                        <div class="grid grid-cols-2 gap-6 pt-4">
+                            <div
+                                class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/10">
+                                <div class="text-3xl font-black text-primary mb-2">+100</div>
+                                <div class="text-sm font-bold text-on-surface-variant">Projetos Entregues</div>
+                            </div>
+                            <div
+                                class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/10">
+                                <div class="text-3xl font-black text-secondary mb-2">24/7</div>
+                                <div class="text-sm font-bold text-on-surface-variant">Suporte Estratégico</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl"></div>
+                        <div
+                            class="relative z-10 w-full h-auto rounded-[3rem] shadow-2xl bg-surface-container-highest p-1 overflow-hidden">
+                            <img alt="Tecnologia e Desenvolvimento BJ Soft"
+                                class="w-full h-auto rounded-[2.8rem] shadow-inner" src="assets/code_typing.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="px-8 pb-24" id="contato">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
+                <!-- Contact Form Card -->
+                <div
+                    class="lg:col-span-7 bg-surface-container-lowest p-10 md:p-16 rounded-[3rem] shadow-soft border border-outline-variant/10">
+                    <h2 class="font-headline text-3xl font-extrabold text-on-surface mb-8">Fale com nossos Especialistas
+                    </h2>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <input type="hidden" name="access_key" value="4dc14390-3dcd-43a5-a138-fcb15b5410b6">
+                        <input type="hidden" name="subject" value="Novo Contato do Site BJ Soft!">
+                        <input type="hidden" name="from_name" value="Landing Page BJ Soft">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1" for="name">Nome
+                                    Completo</label>
+                                <input name="name"
+                                    class="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface"
+                                    id="name" placeholder="Seu nome" type="text" required />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1" for="email">E-mail
+                                    Profissional</label>
+                                <input name="email"
+                                    class="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface"
+                                    id="email" placeholder="seu@email.com" type="email" required />
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1" for="message">Sua
+                                Mensagem</label>
+                            <textarea name="message"
+                                class="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface min-h-[150px]"
+                                id="message" placeholder="Como podemos impulsionar seu ERP?" required></textarea>
+                        </div>
+                        <button
+                            class="hero-gradient text-on-primary w-full md:w-auto px-12 py-4 rounded-full font-headline font-bold text-lg shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
+                            type="submit">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                <!-- Contact Info Cards -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div
+                        class="p-8 bg-primary rounded-[2.5rem] text-on-primary shadow-xl relative overflow-hidden group">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-white/20 transition-colors">
+                        </div>
+                        <span class="material-symbols-outlined text-4xl mb-4"
+                            data-icon="support_agent">support_agent</span>
+                        <h3 class="font-headline text-xl font-bold mb-2">Suporte Consultivo</h3>
+                        <p class="text-on-primary/80 text-sm leading-relaxed">Precisa de resolução ágil e consultoria
+                            técnica? Nossa área técnica está pronta para ajudar.</p>
+                        <div class="mt-4 font-bold">ricardo@bjsoft.com.br</div>
+                    </div>
+                    <div
+                        class="p-8 bg-surface-container-lowest rounded-[2.5rem] shadow-soft border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-4"
+                            data-icon="business_center">business_center</span>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Parcerias Estratégicas</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Quer elevar seu ERP ao próximo nível?
+                            Vamos construir uma estratégia de inovação juntos.</p>
+                        <div class="mt-4 font-bold text-secondary">ricardo@bjsoft.com.br</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full border-t border-slate-200/20 bg-slate-100 dark:bg-slate-950">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-7xl mx-auto gap-8">
+            <div class="space-y-4 text-center md:text-left">
+                <div class="text-lg font-bold text-slate-800 dark:text-slate-200 font-headline">BJ Soft</div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm max-w-xs font-body tracking-wide">
                     Especialistas em ecossistema TOTVS<sup>®</sup>. Transformando dados em decisões estratégicas.
                 </p>
-</div>
-<div class="flex flex-col items-center md:items-end gap-6">
-<div class="flex gap-8 font-body text-sm tracking-wide">
-<a class="text-slate-500 dark:text-slate-400 hover:text-magenta-500 transition-colors" href="politica-privacidade.html">Privacidade</a>
-<a class="text-slate-500 dark:text-slate-400 hover:text-magenta-500 transition-colors" href="termos-uso.html">Termos</a>
-<a class="text-cyan-600 font-semibold transition-colors" href="index.html#contato">Suporte Técnico</a>
-</div>
-<p class="text-[10px] text-slate-400 dark:text-slate-600 uppercase tracking-widest text-center md:text-right">
-                    © BJ Soft. TOTVS<sup>®</sup>, ADVPL<sup>®</sup>, Protheus<sup>®</sup>, and PO-UI<sup>®</sup> are registered trademarks. All rights reserved.
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-6">
+                <div class="flex gap-8 font-body text-sm tracking-wide">
+                    <a class="text-slate-500 dark:text-slate-400 hover:text-magenta-500 transition-colors"
+                        href="politica-privacidade.html">Privacidade</a>
+                    <a class="text-slate-500 dark:text-slate-400 hover:text-magenta-500 transition-colors"
+                        href="termos-uso.html">Termos</a>
+                    <a class="text-cyan-600 font-semibold transition-colors" href="index.html#contato">Suporte
+                        Técnico</a>
+                </div>
+                <p
+                    class="text-[10px] text-slate-400 dark:text-slate-600 uppercase tracking-widest text-center md:text-right">
+                    © BJ Soft. TOTVS<sup>®</sup>, ADVPL<sup>®</sup>, Protheus<sup>®</sup>, and PO-UI<sup>®</sup> are
+                    registered trademarks. All rights reserved.
                 </p>
-</div>
-</div>
-</footer>
-</body></html>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
