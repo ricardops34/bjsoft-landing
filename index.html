@@ -628,7 +628,7 @@
             <!-- Messages Area -->
             <div id="chat-messages" class="chat-body flex-1 p-4 overflow-y-auto flex flex-col min-h-[300px]">
                 <!-- Initial Bot Message -->
-                <div class="message-bot">Olá! Sou o Suporte da BJ. Como posso te chamar?</div>
+                <div class="message-bot">Olá! Sou a Beatriz. Como posso te chamar?</div>
             </div>
 
             <!-- Typing Indicator -->
@@ -762,7 +762,7 @@
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute('id');
                     const navLinks = document.querySelectorAll('#main-nav a[href^="#"]');
-                    
+
                     navLinks.forEach(link => {
                         if (link.getAttribute('href') === `#${id}`) {
                             link.classList.add('text-cyan-700', 'dark:text-cyan-300', 'border-b-2', 'border-cyan-500', 'pb-1');
